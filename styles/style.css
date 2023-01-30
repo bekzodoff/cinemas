@@ -1,3 +1,12 @@
+:root{
+    --white:#fff;
+    --com:"Comfortaa";
+    --mont:"Montserrat";
+    --rob:"Roboto";
+    --orange:#ED8E00;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -26,6 +35,9 @@ button{
 
 /* header */
 
+.header{
+    background: #000;
+}
 .header__poster{
     background: linear-gradient(90.09deg, #3800AF 0%, #BF7204 97.52%, #C27500 100%, #C27500 100%);
     display: flex;
@@ -35,14 +47,94 @@ button{
 }
 .header__icon{
     font-size: 40px;
-    color: #fff;
+    color: var(--white);
     margin-right: 24px;
 }
 .header__text{
     width: 166px;
-    font-family: "Comfortaa";
+    font-family: var(--com);
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
+    color: var(--white);
+}
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo{
+    width: 200px;
+    display: flex;
+    align-items: flex-end;
+    animation: logo 2s 1 linear;
+    overflow: hidden;
+}
+.header__logo-image{
+    margin-right: 5px;
+}
+.header__logo-text{
+    font-family: var(--com);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
     color: #fff;
 }
+.header__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.header__link{
+    display: block;
+    padding: 43px 15px;
+    font-family: var(--mont);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--white);
+    transition: 0.3s;
+    position: relative;
+}
+.header__link:hover{
+    color: var(--orange);
+}
+.header__link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 0px;
+    background: var(--orange);
+    border-radius: 23px 10px 0px 0px;
+    width: 100%;
+    transition: 0.5s;
+}
+.header__link:hover::after{
+    height: 3px;
+}
+
+
+
+
+
+
+
+@keyframes logo {
+    0%{
+        width: 0;
+    } 
+    100%{
+        width: 200px;
+    } 
+}
+
+
+
+
+
+
+
+
